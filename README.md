@@ -15,6 +15,7 @@ recompile.sh -> To recompile the entire code whenever there is any change in tok
 removeComments1.sh -> To remove comments and pre process a file<br />
 tokenizerC.l -> Tokenizer for C files<br />
 singleFileTestDir -> test codes<br />
+other directories -> multiple file assignments
 
 **Usage**
 
