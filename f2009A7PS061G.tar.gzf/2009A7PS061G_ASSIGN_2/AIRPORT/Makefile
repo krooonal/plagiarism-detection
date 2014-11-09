@@ -1,0 +1,4 @@
+
+exec: example.c
+	gcc -o exec example.c
+

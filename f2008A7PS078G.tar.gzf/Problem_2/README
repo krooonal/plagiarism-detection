@@ -1,0 +1,68 @@
+	1.SUBMITTED BY:	
+		BHUVAN MOHAN SINGH RAWAL	2008A7PS078G
+	2.DISCUSSED WITH:				
+		SAJAL MARWAH				2010A7PS049G
+		AKASH CHAUDHRY			    2010A7PS136G
+		ANCHIT AGRAWAL				2010C6PS008G
+	3.The list of the files in the directory are as follows:
+  	   <i> driver.c
+  	       This file allocates a dynamic 2-D structure for storing flyer details.
+  	       and passes the pointer to input(). Upon return from input, it creates subprocess 
+  	       airport. The main program waits for it to finish.
+  	   
+  	   <ii> implementation.c
+  	        Creates the process tree of the airport process. 
+  	   
+  	   <iii> input.c
+  	   		Reads the input file, and stores the flyer details into their respective structure.
+  	   
+  	   <iv> colorful.c
+  	   	    finds if a given number is colorful or not.
+  	   
+  	   <v> palindrome.c
+  	        finds if a given number is a palindrome or not.
+  	   <vi> prime.c
+  	        finds if a given number is a prime or not.
+  	   <vii> header.h
+  	         Contains the structure flyers, include directives and function declarations
+  	         
+  	   <viii> Makefile
+  	   		  Can be used to compile the program.
+  	   
+  	   <ix> inp3.txt,inp4.txt,inp5.txt,inp6.txt
+  	   		various input files to test the program
+  	   
+  	   <x> Readme
+  	   	    The file thats currently being read.
+	
+	4.
+	** TO COMPILE THE PROGRAM:
+	** IN THE DIRECTORY TYPE make
+	**	
+	** TO START THE PROGRAM:
+	** TYPE ./out inp.txt
+	** where inp.txt is the input file containing flyer information 
+	
+	5.I have not been able to complete the assignment because of one indeterminate error while
+	  scanning the input. If the number of entries is less than 4 the input is read correctly but
+	  for input more than 4 the input fails. After getting into details it was learnt that one 
+	  of the malloc was failing to create memory for the 5th strutcture onwards for 
+	  storing flyer details for some unknown reason. Since the number of passengers 
+	  are expected to be significantly more than 4, the issue was indispensable. 
+	  After some research the and using the tool valgrind the problem was found with
+	  the malloc. One of the various errors is given below:
+	==9570== Invalid read of size 4
+	==9570==    at 0x8048A78: airport (in /home/bhuvan/Documents/
+	CS_C372_OPERATING_SYSTEMS/assignments/assignment2/new_style/out)
+	==9570==by 0x804871B: main (in /home/bhuvan/Documents/CS_C372_OPERATING_SYSTEMS/
+	assignments/assignment2/new_style/out)
+	==9570==  Address 0x42202ec is 0 bytes after a block of size 4 alloc'd
+	==9570==    at 0x402BE68: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+	==9570==    by 0x80486A3: main (in /home/bhuvan/Documents/
+	CS_C372_OPERATING_SYSTEMS/assignments/assignment2/new_style/out)
+
+	6. If I was given more time I would have declared a one Dimensional Structure and would have 
+	operated it for storing multiple entries, thus eliminating the stack smashing problem I faced.
+	I was able to understand the problem and the execution flow of it. I have also included the 3 
+	subprograms for finding palindrome, prime numbers and colorful numbers. The input file is 
+	read correctly for upto 4 entries of flyers the different dates and time are comparison ready.

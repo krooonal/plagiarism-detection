@@ -1,0 +1,52 @@
+	1.SUBMITTED BY:	
+		BHUVAN MOHAN SINGH RAWAL	2008A7PS078G
+	2.DISCUSSED WITH:				
+		SAJAL MARWAH				2010A7PS049G
+		AKASH CHAUDHRY			    2010A7PS136G
+		ANCHIT AGRAWAL				2010C6PS008G
+		
+
+	OBJECTIVE: THIS CODE TRAVERSES THROUGH A MATRIX VIA A UNIQUE PATH BY CREATING SUBPROCESSES FOR 		NEXT COLUMN AND NEXT ROW
+
+	3. The list of the files in the directory are as follows:
+  	   <i> driver.c 
+          It is the file which calls further subprograms to take matrix input, calling
+          the function to find out whether a path exists to reach mary jane at the bottom
+          right corner
+  	  <ii> input.c
+   	      Allocates the memory for the Matrix and reads the input file.
+   	  <iii> implementation.c 
+   	      contains function fonk(),fonk1(),fonk2(). fonk2,fonk3 deal with the boundary case 
+   	      further explained in 4 <ii>
+   	  <iv> interface.h
+   	      Contains all the function declarations, global variables and include directives.
+   	  <v> inp.txt, inp2.txt,inp3.txt
+   	      3 input files of different dimensions for testing the program.
+   	       
+   4.
+	** TO COMPILE THE PROGRAM:
+	** IN THE DIRECTORY TYPE make
+	**	
+	** TO START THE PROGRAM:
+	** TYPE ./out inp.txt
+	** where inp.txt is the input file containing matrix with the first entry as dimension
+	
+	5. <a>
+	  As already mentioned, the input is read by function input() which takes in the 
+	  argv[1] as its parameter it in turn opens the input file described in argv[1] and 
+	  creates a double dimentional array dynamically by using malloc function.
+	  
+	  <b>
+	  After the inputs are taken in, the control returns back to the main function which passes the
+	  value 0,0 to the fonk function which is present in the implementation file.
+	  The function fonk is a recursive function whose job is to create two process if boundary 
+	  conditions are not met (i or j are present in the last column or row, in that case only 
+	  one subprocess needs to be created, in that case it ) The process chain upon finding 
+	  Mary Jane successively exit with exit(0) and the final call will return 1 to the main if
+	  Mary is found
+
+	6. The assignment gives correct output if the input is given in the correct
+	   (for n as dimension there should be n*n entries) and if only a unique path exists.
+
+	7. Run Time Errors: None Encountered as of yet on condition that input is correct.
+
