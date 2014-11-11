@@ -3,6 +3,8 @@ plagiarism-detection
 
 Detect plagiarism in single and multi-file assignments (only C language as of now).
 
+Uses flex, bash, wxPython, gcc 
+
 **File Info**
 
 FindSim.sh -> To find similarities between two single file assignments<br />
